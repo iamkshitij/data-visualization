@@ -1,3 +1,43 @@
-.row{
- margin-top: 50px;
+
+
+.header-text{
+    margin-top: 25px;
+    color: #273971 !important;
+    font-size: 32px;
+    margin-bottom: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+img{
+    margin-top:20px;
+    margin-left: 20px;
+    height: 54px;
+    width: 54px;
+
+}
+.text-muted{
+    font-size: 10px;
+}
+mat-card{
+    background: #fff;
+    color: #636363;
+    width: 180px;
+    
+}
+
+
+
+h5{
+    color: #273971;
+    font-family: 'Times New Roman', Times, serif;
+}
+p{
+    color: #636363;
+}
+
+.stats-text{
+    color: #273971;
+    margin-left: 15px;
+    font-size: 18px;
+    margin-bottom:70px;
 }

@@ -1,0 +1,174 @@
+
+<!-----Row 1 contents -->
+<div class="row">
+        <div class="col-sm-4">
+            <mat-card class="summary-r1-card">
+                <mat-card-title class="text-center" >
+                    <h4 class="summary-r1-content">{{totalBattingScore}}</h4>
+                </mat-card-title>
+                <hr>
+                <mat-card-content class="text-center">
+                    <p class="summary-r1-title">Total Batting Score</p>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col-sm-4">
+                <mat-card class="summary-r1-card">
+                        <mat-card-title class="text-center">
+                            <h4 class="summary-r1-content">
+                                    {{totalMatches}}
+                            </h4>
+                        </mat-card-title>
+                        <hr>
+                        <mat-card-content class="text-center">
+                            <p class="summary-r1-title">
+                                Total Matches Played
+                            </p>
+                        </mat-card-content>
+                    </mat-card>
+        </div>
+        <div class="col-sm-4">
+                <mat-card class="summary-r1-card">
+                        <mat-card-title class="text-center">
+                            <h4 class="summary-r1-content">
+                                    150
+                            </h4>
+                        </mat-card-title>
+                        <hr>
+                        <mat-card-content class="text-center">
+                            <p class="summary-r1-title">
+                               Highest Score
+                            </p>
+                        </mat-card-content>
+                    </mat-card>
+                   </div>
+       
+    </div>
+
+<!--- Row 2 contents  --->
+<div class="row" style="margin-top:10px ; ">
+        <div class="col-sm-4">
+            <mat-card class="summary-r1-card">
+                <mat-card-title class="text-center" >
+                    <h4 class="summary-r1-content">
+                        9000
+                    </h4>
+                </mat-card-title>
+                <hr>
+                <mat-card-content class="text-center">
+                    <p class="summary-r1-title">Total Runs in 1st Innings</p>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col-sm-4">
+                <mat-card class="summary-r1-card">
+                        <mat-card-title class="text-center">
+                            <h4 class="summary-r1-content">
+                                    9800
+                            </h4>
+                        </mat-card-title>
+                        <hr>
+                        <mat-card-content class="text-center">
+                            <p class="summary-r1-title">
+                                    Total Runs in 2nd Innings
+                            </p>
+                        </mat-card-content>
+                    </mat-card>
+        </div>
+        <div class="col-sm-4">
+                <mat-card class="summary-r1-card">
+                        <mat-card-title class="text-center">
+                            <h4 class="summary-r1-content">
+                                    15000
+                            </h4>
+                        </mat-card-title>
+                        <hr>
+                        <mat-card-content class="text-center">
+                            <p class="summary-r1-title">
+                                Batting Score in Winning Matches
+                            </p>
+                        </mat-card-content>
+                    </mat-card>
+                   </div>
+       
+    </div>
+
+
+<!----row 2 contents ends here-->
+
+
+<!---row 3 contents-->
+<div class="row" style="margin-top:10px ; ">
+        <div class="col-sm-4">
+            <mat-card class="summary-r1-card">
+                <mat-card-title class="text-center" >
+                    <h4 class="summary-r1-content">
+                        110
+                    </h4>
+                </mat-card-title>
+                <hr>
+                <mat-card-content class="text-center">
+                    <p class="summary-r1-title">
+                    No of 50's
+                    </p>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col-sm-4">
+                <mat-card class="summary-r1-card">
+                        <mat-card-title class="text-center">
+                            <h4 class="summary-r1-content">
+                                    98
+                            </h4>
+                        </mat-card-title>
+                        <hr>
+                        <mat-card-content class="text-center">
+                            <p class="summary-r1-title">
+                                    No Of 100's
+                            </p>
+                        </mat-card-content>
+                    </mat-card>
+        </div>
+        <div class="col-sm-4">
+                <mat-card class="summary-r1-card">
+                        <mat-card-title class="text-center">
+                            <h4 class="summary-r1-content">
+                                    120
+                            </h4>
+                        </mat-card-title>
+                        <hr>
+                        <mat-card-content class="text-center">
+                            <p class="summary-r1-title">
+                               No Of Not Out's
+                            </p>
+                        </mat-card-content>
+                    </mat-card>
+                   </div>
+       
+    </div>
+
+
+
+<!---row 3 ends here-->
+    <div class="row" style="margin-top: 50px;">
+        <div class="col-sm-4">
+                <mat-card class="countries-card">
+            
+                        <mat-card-title>
+                    
+                            <h4>Countries Played Against</h4>
+                        </mat-card-title>
+                        <mat-card-content>
+                            
+                            <mat-list role="list">
+                                    <hr>
+                                <mat-list-item role="listitem" *ngFor="let country of countriesPlayedAgainst">
+                                    <p>{{country}}</p>
+                                </mat-list-item>
+                            </mat-list>
+                    
+                        </mat-card-content>
+                    </mat-card>
+        
+        </div>
+    </div>

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Papa } from 'ngx-papaparse';
-
+import { ChartType } from 'chart.js';
+import { MultiDataSet, Label } from 'ng2-charts';
 
 @Component({
   selector: 'app-summary',
@@ -9,6 +10,10 @@ import { Papa } from 'ngx-papaparse';
   styleUrls: ['./summary.component.css']
 })
 export class SummaryComponent implements OnInit {
+
+  public doughnutChartLabels: Label[] = ['50s', '100s'];
+  public doughnutChartData: MultiDataSet =[ [45,90] ]
+  public doughnutChartType: ChartType = 'doughnut';
 
   csvPath: string = "/assets/sachin.csv";
   option = {

@@ -1,44 +1,205 @@
 <div class="row">
-        <div class="col-sm-4">
-            <mat-card>
-                <mat-card-title>
-                    <h4 class="center">Total Score</h4>
-                </mat-card-title>
-                <hr>
-                <mat-card-content>
-                    <h2>{{totalBattingScore}}</h2>
-                </mat-card-content>
-            </mat-card>
-        </div>
-        <div class="col-sm-4">
-            
-            <mat-card class="countries-card">
-            
-                <mat-card-title>
-            
-                    <h4>Countries Played Against</h4>
-                </mat-card-title>
-                <mat-card-content>
-                    
-                    <mat-list role="list">
-                            <hr>
-                        <mat-list-item role="listitem" *ngFor="let country of countriesPlayedAgainst">
-                            <p>{{country}}</p>
-                        </mat-list-item>
-                    </mat-list>
-            
-                </mat-card-content>
-            </mat-card>
-        </div>
-        <div class="col-sm-4">
-                <mat-card>
-                        <mat-card-title>
-                            <h4 class="center">Total Matched Played</h4>
-                        </mat-card-title>
-                        <hr>
-                        <mat-card-content>
-                            <h2>{{totalMatches}}</h2>
-                        </mat-card-content>
-                    </mat-card>
-        </div>
+    <div class="col-sm-4">
+                <h2 class="header-text">
+                 Summary
+                </h2>
+        
+    </div>
+</div>
+
+<div class="row">
+    <h4 class="stats-text">
+        Stats
+    </h4>
+</div>
+
+<div class="row" style="margin-top: 10px;">
+    
+    
+            <div class="col-sm-2">
+                <div class="card mb-3">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img class="rounded mx-auto d-block" src="assets/diagram.png">
+                        </div>
+                        <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-text">
+                                        {{totalBattingScore}}
+                                    </h5>
+                                    <p class="card-text">
+                                        <small class="text-muted">
+                                                Total Batting Score
+                                        </small>
+                                    </p>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="col-sm-2">
+                    <div class="card mb-3">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img class="img-responsive" src="assets/cricket.png">
+                            </div>
+                            <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-text">
+                                            150*
+                                        </h5>
+                                        <p class="card-text">
+                                            <small class="text-muted">
+                                                    Highest Batting Score
+                                            </small>
+                                        </p>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-2">
+                        <div class="card mb-3">
+                            <div class="row no-gutters">
+                                <div class="col-md-4">
+                                    <img class="img" src="assets/total_matches.png">
+                                </div>
+                                <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-text">
+                                                483
+                                            </h5>
+                                            <p class="card-text">
+                                                <small class="text-muted">
+                                                        Total Matches Played
+                                                </small>
+                                            </p>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                            <div class="card mb-3">
+                                <div class="row no-gutters">
+                                    <div class="col-md-4">
+                                        <img class="img" src="assets/oppositions.png">
+                                    </div>
+                                    <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-text">
+                                                    15
+                                                </h5>
+                                                <p class="card-text">
+                                                    <small class="text-muted">
+                                                            Total Opposition Played
+                                                    </small>
+                                                </p>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-2">
+                                <div class="card mb-3">
+                                    <div class="row no-gutters">
+                                        <div class="col-md-4">
+                                            <img class="img" src="assets/batting_won.png">
+                                        </div>
+                                        <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <h5 class="card-text">
+                                                        14803
+                                                    </h5>
+                                                    <p class="card-text">
+                                                        <small class="text-muted">
+                                                               Batting Score (Games Won)
+                                                        </small>
+                                                    </p>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-2">
+                                    <div class="card mb-3">
+                                        <div class="row no-gutters">
+                                            <div class="col-md-4">
+                                                <img class="img" src="assets/not-outs.png">
+                                            </div>
+                                            <div class="col-md-8">
+                                                    <div class="card-body">
+                                                        <h5 class="card-text">
+                                                            48
+                                                        </h5>
+                                                        <p class="card-text">
+                                                            <small class="text-muted">
+                                                                    No of Not-Outs
+                                                            </small>
+                                                        </p>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    </div>
+
+    <div class="row" style="margin-top: 10px;">
+            <div class="col-sm-6">
+                    <div class="card">
+                            <div class="card-header text-center">
+                               <h5>
+                                    50s And 100s Analysis  
+                            </h5>
+                            </div>
+                            <div class="card-body">
+
+                            <!--chart doughnuts-->
+                            <div>
+                                    <div>
+                                      <div style="display: block">
+                                        <canvas baseChart
+                                          [data]="doughnutChartData"
+                                          [labels]="doughnutChartLabels"
+                                          [chartType]="doughnutChartType">
+                                        </canvas>
+                                      </div>
+                                    </div>
+                            </div>
+                        <!--chart donughts ends-->
+                    </div>
+                        
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                        <div class="card">
+                                <div class="card-header text-center">
+                                   <h5>
+                                        Innings Analysis  
+                                </h5>
+                                </div>
+                                <div class="card-body">
+    
+                                <!--chart doughnuts-->
+                                <div>
+                                        <div>
+                                          <div style="display: block">
+                                            <canvas baseChart
+                                              [data]="doughnutChartData"
+                                              [labels]="doughnutChartLabels"
+                                              [chartType]="doughnutChartType">
+                                            </canvas>
+                                          </div>
+                                        </div>
+                                </div>
+                            <!--chart donughts ends-->
+                        </div>
+                            
+                        </div>
+                    </div>
     </div>
