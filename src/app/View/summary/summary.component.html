@@ -1,0 +1,44 @@
+<div class="row">
+        <div class="col-sm-4">
+            <mat-card>
+                <mat-card-title>
+                    <h4 class="center">Total Score</h4>
+                </mat-card-title>
+                <hr>
+                <mat-card-content>
+                    <h2>{{totalBattingScore}}</h2>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col-sm-4">
+            
+            <mat-card class="countries-card">
+            
+                <mat-card-title>
+            
+                    <h4>Countries Played Against</h4>
+                </mat-card-title>
+                <mat-card-content>
+                    
+                    <mat-list role="list">
+                            <hr>
+                        <mat-list-item role="listitem" *ngFor="let country of countriesPlayedAgainst">
+                            <p>{{country}}</p>
+                        </mat-list-item>
+                    </mat-list>
+            
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col-sm-4">
+                <mat-card>
+                        <mat-card-title>
+                            <h4 class="center">Total Matched Played</h4>
+                        </mat-card-title>
+                        <hr>
+                        <mat-card-content>
+                            <h2>{{totalMatches}}</h2>
+                        </mat-card-content>
+                    </mat-card>
+        </div>
+    </div>

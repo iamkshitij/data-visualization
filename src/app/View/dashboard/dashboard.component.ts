@@ -45,6 +45,8 @@ export class DashboardComponent implements OnInit {
             countries.forEach(country => totalScore.push(this.getBattingScoreVsOpponent(country)));
 
             const opponentBattingScore = totalScore.reduce((a,c)=>a+c);
+            console.log(opponentBattingScore);
+            console.log(countries);
             let winBattingScore = this.getBattingScoreVsMatchResult("won");
             let lostbattingScore = this.getBattingScoreVsMatchResult("lost");
 
@@ -75,7 +77,7 @@ export class DashboardComponent implements OnInit {
                 .map(score => parseInt(score.batting_score))
                 .filter(score => !isNaN(score))
                 
-              console.log(batting_score)
+             // console.log(batting_score)
             return batting_score;
 } 
         getBattingScoreVsDate(){

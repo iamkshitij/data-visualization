@@ -1,1 +1,11 @@
-<app-dashboard></app-dashboard>
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened class="custom-drawer">
+        <app-sidenav></app-sidenav>
+    </mat-drawer>
+    <mat-drawer-content>
+        <div class="container-fluid">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-drawer-content>
+  </mat-drawer-container>
+  

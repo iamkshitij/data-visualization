@@ -1,0 +1,51 @@
+h3{
+    margin-top:30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #292929;
+    font-family: sans-serif;
+}
+
+.navs{
+    margin-top: 120px;
+}
+
+.row{
+    margin-bottom: 10px;
+}
+
+a:active{
+    background: #292929;
+}
+
+a{
+    
+}
+
+.img-responsive{
+    height: 32px;
+    width: 32px;
+    display: block;
+    margin-top:5px !important;
+    margin: 0 auto;
+    color: rgb(151, 148, 148);
+    margin-bottom:5px !important;
+}
+
+p{
+    line-height: 1.5em;
+    height: 3em;       /* height is 2x line-height, so two lines will display */
+    overflow: hidden;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: rgb(151, 148, 148);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+mat-card{
+    color: #535353;
+    background: white;
+    height: 100px;
+    width: 90px;
+    
+}
