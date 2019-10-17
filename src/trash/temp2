@@ -1,0 +1,27 @@
+              <div class="col-sm-6">
+                  <div class="card">
+                      <div class="card-header text-center">
+                          <h5>
+                              Innings Analysis
+                          </h5>
+                      </div>
+                      <div class="card-body">
+                          <!---chart barchart-->
+                          <div *ngIf="barChartData">
+                            <div>
+                              <div style="display: block">
+                                <canvas baseChart
+                                  [datasets]="barChartData"
+                                  [labels]="barChartLabels"
+                                  [options]="barChartOptions"
+                                  [plugins]="barChartPlugins"
+                                  [legend]="barChartLegend"
+                                  [chartType]="barChartType">
+                                </canvas>
+                              </div>
+                             
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>

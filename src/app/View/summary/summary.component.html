@@ -47,7 +47,7 @@
                             <div class="col-md-8">
                                     <div class="card-body">
                                         <h5 class="card-text">
-                                            150*
+                                            {{highestScore}}
                                         </h5>
                                         <p class="card-text">
                                             <small class="text-muted">
@@ -70,7 +70,7 @@
                                 <div class="col-md-8">
                                         <div class="card-body">
                                             <h5 class="card-text">
-                                                483
+                                                {{totalMatches}}
                                             </h5>
                                             <p class="card-text">
                                                 <small class="text-muted">
@@ -91,11 +91,11 @@
                                     <div class="col-md-8">
                                             <div class="card-body">
                                                 <h5 class="card-text">
-                                                    15
+                                                    {{avgScore}}
                                                 </h5>
                                                 <p class="card-text">
                                                     <small class="text-muted">
-                                                            Total Opposition Played
+                                                            Average Score
                                                     </small>
                                                 </p>
                                             </div>
@@ -113,7 +113,7 @@
                                         <div class="col-md-8">
                                                 <div class="card-body">
                                                     <h5 class="card-text">
-                                                        14803
+                                                        {{battingWinScore}}
                                                     </h5>
                                                     <p class="card-text">
                                                         <small class="text-muted">
@@ -149,57 +149,88 @@
                                 </div>
     </div>
 
-    <div class="row" style="margin-top: 10px;">
-            <div class="col-sm-6">
-                    <div class="card">
-                            <div class="card-header text-center">
-                               <h5>
-                                    50s And 100s Analysis  
-                            </h5>
-                            </div>
-                            <div class="card-body">
+    <div class="row" style="margin-top: 10px; ">
+        <div class="col-sm-6">
+            <div class="card">
+                    <div class="card-header text-center">
+                       <h5>
+                            Innings Analysis - <small>Total Runs {{totalBattingScore}}</small>
+                    </h5>
+                    </div>
+                    <div class="card-body">
 
-                            <!--chart doughnuts-->
-                            <div>
-                                    <div>
-                                      <div style="display: block">
-                                        <canvas baseChart
-                                          [data]="doughnutChartData"
-                                          [labels]="doughnutChartLabels"
-                                          [chartType]="doughnutChartType">
-                                        </canvas>
-                                      </div>
-                                    </div>
+                    <!--chart doughnuts-->
+                    <div>
+                            <div *ngIf="doughnutChartData">
+                              <div style="display: block">
+                                <canvas 
+                                 baseChart
+                                  [data]="doughnutChartData"
+                                  [labels]="doughnutChartLabels"
+                                  [chartType]="doughnutChartType">
+                                </canvas>
+                              </div>
                             </div>
-                        <!--chart donughts ends-->
                     </div>
-                        
-                    </div>
-                </div>
-                <div class="col-sm-6">
+                <!--chart donughts ends-->
+                <p class="small" style="color:#69C3FF">{{scoreFirstInnings}} Runs - 1st Innings </p>
+                <p class="small" style="color: #FFA1B5;">{{scoreSecondInnings}} Runs - 2nd Innings </p>
+                
+            </div>
+                
+            </div>
+        </div>
+
+
+                    <!---50s and 100s analysis-->
+
+                    <div class="col-sm-6">
                         <div class="card">
                                 <div class="card-header text-center">
                                    <h5>
-                                        Innings Analysis  
+                                        50's / 100's Analysis  
                                 </h5>
                                 </div>
                                 <div class="card-body">
     
                                 <!--chart doughnuts-->
                                 <div>
-                                        <div>
+                                        <div *ngIf="centuriesChartData">
                                           <div style="display: block">
-                                            <canvas baseChart
-                                              [data]="doughnutChartData"
-                                              [labels]="doughnutChartLabels"
-                                              [chartType]="doughnutChartType">
+                                            <canvas 
+                                             baseChart
+                                              [data]="centuriesChartData"
+                                              [labels]="centuriesChartLabels"
+                                              [chartType]="centuriesChartType">
                                             </canvas>
                                           </div>
                                         </div>
                                 </div>
                             <!--chart donughts ends-->
+                            <p class="small" style="color:#69C3FF">{{halfCenturies}} - 50s </p>
+                            <p class="small" style="color: #FFA1B5;">{{centuries}} - 100s </p>
+
                         </div>
                             
                         </div>
                     </div>
+    </div>
+
+
+    <div class="row" style="margin-top: 10px;">
+        <h3>Countries Played Against</h3>
+    </div>
+    <div class="row" style="margin-top: 10px;margin-bottom: 20px;" >
+        <div class="col-sm-3" 
+        *ngFor="let country of countriesPlayedAgainst"
+         style="margin-bottom: 10px;">
+            <div class="card">
+              <div class="card-body">
+                  <small style="color:black">{{country}}</small>
+
+              </div> 
+        </div>
+        </div>
+        
+
     </div>
