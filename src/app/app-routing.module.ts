@@ -14,7 +14,9 @@ const routes: Routes = [
   { path: 'innings', component: InningsComponent},
   { path: 'ground', component: GroundComponent},
   { path: 'results', component: ResultsComponent},
-  { path: 'year', component: YearComponent}
+  { path: 'year', component: YearComponent},
+  { path: '', component: SummaryComponent }
+
 ];
 
 @NgModule({

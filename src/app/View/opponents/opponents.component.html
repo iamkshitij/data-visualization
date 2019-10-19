@@ -3,3 +3,169 @@
         <h3>Vs Opponents</h3>
     </div>
 </div>
+
+<div class="row">
+    <h4 class="stats-text">
+        Stats
+    </h4>
+</div>
+
+
+<div class="row bar-graph">
+  <div class="col-sm-6">
+    <div class="card">
+            <div class="card-header text-center">
+               <h5>
+                    Opponents Analysis - <small>Total Runs {{totalBattingScore}}</small>
+            </h5>
+            </div>
+            <div class="card-body">
+
+            <!--chart doughnuts-->
+            <div>
+                    <div *ngIf="barChartData">
+                      <div style="display: block">
+                        <canvas baseChart
+                                [datasets]="barChartData"
+                                [labels]="barChartLabels"
+                                [options]="barChartOptions"
+                                [legend]="barChartLegend"
+                                [chartType]="barChartType">
+                              </canvas>
+                      </div>
+                    </div>
+            </div>
+        <!--chart donughts ends-->
+        
+    </div>
+        
+    </div>
+</div>
+<div class="col-sm-6">
+  <div class="card">
+          <div class="card-header text-center">
+             <h5>
+                  Opponents Analysis - <small>Centuries & Half Centuries </small>
+          </h5>
+          </div>
+          <div class="card-body">
+
+          <!--chart doughnuts-->
+          <div>
+                  <div *ngIf="barChartData1">
+                    <div style="display: block">
+                      <canvas baseChart
+                              [datasets]="barChartData1"
+                              [labels]="barChartLabels"
+                              [options]="barChartOptions"
+                              [legend]="barChartLegend"
+                              [chartType]="barChartType">
+                            </canvas>
+                    </div>
+                  </div>
+          </div>
+      <!--chart donughts ends-->
+      
+  </div>
+      
+  </div>
+</div>
+
+</div>
+
+
+<div class="row bar-graph">
+  <div class="col-sm-6">
+    <div class="card">
+            <div class="card-header text-center">
+               <h5>
+                Catches Analysis - <small>v Opponents</small>
+            </h5>
+            </div>
+            <div class="card-body">
+
+            <!--chart doughnuts-->
+            <div>
+                    <div *ngIf="barChartData2">
+                      <div style="display: block">
+                        <canvas baseChart
+                                [datasets]="barChartData2"
+                                [labels]="barChartLabels"
+                                [options]="barChartOptions"
+                                [legend]="barChartLegend"
+                                [chartType]="barChartType">
+                              </canvas>
+                      </div>
+                    </div>
+            </div>
+        <!--chart donughts ends-->
+        
+    </div>
+        
+    </div>
+</div>
+<div class="col-sm-6">
+  <div class="card">
+          <div class="card-header text-center">
+             <h5>
+                  Wickets Analysis - <small>v Opponents </small>
+          </h5>
+          </div>
+          <div class="card-body">
+
+          <!--chart doughnuts-->
+          <div>
+                  <div *ngIf="barChartData3">
+                    <div style="display: block">
+                      <canvas baseChart
+                              [datasets]="barChartData3"
+                              [labels]="barChartLabels"
+                              [options]="barChartOptions"
+                              [legend]="barChartLegend"
+                              [chartType]="barChartType">
+                            </canvas>
+                    </div>
+                  </div>
+          </div>
+      <!--chart donughts ends-->
+      
+  </div>
+      
+  </div>
+</div>
+
+</div>
+
+
+<div class="row table-summary" style="margin-bottom:10px;">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                <table class="table">
+                    <thead class="thead-dark">
+                      <tr>
+                        
+                        <th scope="col">Opponents</th>
+                        <th scope="col">Batting Runs</th>
+                        <th scope="col">50's</th>
+                        <th scope="col">100's</th>
+                        <th scope="col">Matches Won</th>  
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let tdata of tabledata">
+                        
+                        <td>{{tdata.country}}</td>
+                        <td>{{tdata.score}}</td>
+                        <td>{{tdata.halfCenturies}}</td>
+                        <td>{{tdata.centuries}}</td>
+                        <td>{{tdata.matchResults}}</td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+</div>
+

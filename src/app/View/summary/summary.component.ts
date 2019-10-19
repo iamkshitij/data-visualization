@@ -34,14 +34,14 @@ export class SummaryComponent implements OnInit {
   scoreSecondInnings;
   centuries;
   halfCenturies;
-
+  twoH;
 
   public doughnutChartLabels: Label[] = ['1st Innings', '2nd Innings'];
 
   public doughnutChartData: MultiDataSet;
   public doughnutChartType: ChartType = 'doughnut';
   
-  public centuriesChartLabels : Label[] = ['50s','100s'];
+  public centuriesChartLabels : Label[] = ['50s','100s','200s'];
   public centuriesChartData: MultiDataSet;
   public centuriesChartType: ChartType = 'doughnut';
 
@@ -90,15 +90,16 @@ export class SummaryComponent implements OnInit {
    
            this.centuries =  this.getCenturies("100");
           this.halfCenturies = this.getCenturies("50");
-
-          this.centuriesChartData = [[this.halfCenturies,this.centuries]];
+            this.twoH = this.getCenturies("200");
+          //  console.log(twoH);
+          this.centuriesChartData = [[this.halfCenturies,this.centuries,this.twoH]];
         });
   }
 
   getCenturies(type){
       let batting_score = this.data
                           
-                              .filter(score => parseInt(score.batting_score) > type);
+                              .filter(score => parseInt(score.batting_score) >= type);
            
       return batting_score.length;                   
 
