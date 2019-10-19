@@ -95,7 +95,8 @@ export class OpponentsComponent implements OnInit {
       //  console.log(this.winGames);
          this.barChartData = [{data: this.totalScore,label: 'Scores'}];
          this.barChartData2 = [{data: this.totalCatches,label: 'Catches'}];
-        //  this.barChartData3 = [{data: this.totalWickets,label: 'Catches'}];
+         this.barChartData3 = [{data: this.totalWickets,label: 'Wickets'}];
+        
          this.barChartLabels = this.countriesList;
          this.barChartData1 = [ 
            {data: this.centuriesCountry,label: '100\'s'},
@@ -142,14 +143,14 @@ getCatchesVsOpponent(opposition){
   return batting_score;
 }
 
-// getWicketsVsOpponent(opposition){
-//   let batting_score = this.data
-//                 .filter( score => (score.opposition === opposition))
-//                 // .filter(score => !isNaN(score))
-//                 // .map(score => parseInt(score.wickets))
-                
-//                 // .reduce((a,c)=> a+c)
-//     console.log(opposition + "-" + batting_score)
-//   return batting_score;
-// }
+getWicketsVsOpponent(opposition){
+  let batting_score = this.data
+                .filter( score => (score.opposition === opposition))
+                .map(score => parseInt(score.wickets))
+                .filter(score => !isNaN(score))
+                .reduce((a,c)=> a+c,0)
+
+    console.log(opposition + "-" + batting_score)
+  return batting_score;
+}
 }
