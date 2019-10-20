@@ -72,7 +72,7 @@ export class OpponentsComponent implements OnInit {
       this.countriesList.forEach(country => this.winGames.push(this.getWinGames(country)));
 
       this.countriesList.forEach(country => this.totalCatches.push(this.getCatchesVsOpponent(country)));
-      //this.countriesList.forEach(country => this.totalWickets.push(this.getWicketsVsOpponent(country)));
+      this.countriesList.forEach(country => this.totalWickets.push(this.getWicketsVsOpponent(country)));
       
       for(let i=0;i<15;i++){
         let obj = {

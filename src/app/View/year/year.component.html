@@ -3,3 +3,62 @@
             <h3>Vs Year</h3>
         </div>
     </div>
+
+
+    <div class="row">
+        <h4 class="stats-text">
+            Stats
+        </h4>
+    </div>
+    <div class="row line-graph">
+        <div class="col-sm-6">
+          <div class="card">
+                  <div class="card-header text-center">
+                     <h5>
+                          Batting Score Over Years
+                  </h5>
+                  </div>
+                  <div class="card-body">
+      
+                  <!--chart doughnuts-->
+                  <div>
+                          <div *ngIf="lineChartData">
+                            <div style="display: block">
+                              <canvas baseChart
+                                      [datasets]="lineChartData"
+                                      [labels]="lineChartLabels"
+                                      [legend]="lineChartLegend"
+                                
+                                      [chartType]="lineChartType">
+                                    </canvas>
+                            </div>
+                          </div>
+                  </div>
+              <!--chart donughts ends-->
+              
+          </div>
+              
+          </div>
+      </div>
+
+      <div class="col-sm-6">
+          <div class="card">
+
+          
+          <div class="card-header text-center">
+              <h5>
+                  Year Analysis
+              </h5>
+          </div>
+          <div class="card-body">
+              <p *ngIf="firstMatch">
+                  First Match Played: <small><b>{{firstMatch}}</b></small> 
+              </p>
+              <p>
+                  Last Match Played: <small><b>{{lastMatch}}</b></small>
+              </p>
+          </div>
+      </div>
+      </div>
+    
+      </div>
